@@ -31,7 +31,7 @@ jobs:
           git config --local user.name "GitHub Action"
           if [ -f log.txt ]; then
             git add log.txt
-            git commit -m "Update the log.txt"
+            git commit -m "Update the log.txt" || echo "No changes to commit"
           else
             echo "log.txt is not available"
           fi
